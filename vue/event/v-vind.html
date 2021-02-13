@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro" style="text-align:center;">
+        <h2> {{ message }}</h2>
+        <button v-on:click="greeting">Click ME</button>
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                message: "Hello"
+            },
+            methods:{
+                greeting: function () {
+                    this.message += " World"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

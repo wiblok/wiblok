@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro" style="text-align:center;">
+        <a v-bind:href="url" target="_blank">Click Me</a><br />
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                url: "http://www.google.com"
+            },
+        });
+    </script>
+</body>
+</html>

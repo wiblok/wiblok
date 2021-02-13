@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue_det" style = "text-align:center;">
+        <h1>{{ greeting() }}</h1>
+    </div>
+<script>
+    var vm = new Vue({
+        el: '#vue_det',
+        data: {
+            message: 'Hello World'
+        },
+        methods: {
+            greeting: function () {
+                return this.message
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

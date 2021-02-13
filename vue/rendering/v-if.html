@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro" style="text-align:center;">
+        <button v-on:click="reverseFlg">Click Me</button>
+        <h2 v-if="showFlg"> {{ message }}</h2>
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                message: "Hello World",
+                showFlg: true
+            },
+            methods:{
+                reverseFlg: function(){
+                    this.showFlg = !this.showFlg
+                }
+            }
+        });
+    </script>
+</body>
+</html>
