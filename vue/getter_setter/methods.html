@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro" style="text-align:center;">
+        <h1>{{ greeting() }}</h1>
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                message: 'dlroW olleH'
+            },
+            methods: {
+                greeting: function () {
+                    return this.message.split('').reverse().join('')
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
