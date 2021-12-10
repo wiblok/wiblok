@@ -1,9 +1,10 @@
 // Require the framework and instantiate it
-const fastify = require("fastify")({ logger: true });
+const fastify = require("fastify")({
+  logger: true,
+});
 
-// Declare a route
-fastify.get("/", async (request, reply) => {
-  return { hello: "world" };
+fastify.get("/:name", function(request, reply) {
+  reply.send("こんにちは" + request.params.name + "さん");
 });
 
 // Run the server!
